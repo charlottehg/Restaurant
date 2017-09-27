@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0c026d57-5999-4e0a-96cd-bbd2163eb2b0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/minfil/Order.java" afterPath="$PROJECT_DIR$/src/main/java/minfil/Order.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/bestilling.html" afterPath="$PROJECT_DIR$/src/main/webapp/bestilling.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/livepanel.html" afterPath="$PROJECT_DIR$/src/main/webapp/livepanel.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -18,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="livepanel.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="livepanel.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/livepanel.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="26" column="137" lean-forward="false" selection-start-line="26" selection-start-column="133" selection-end-line="26" selection-end-column="137" />
+            <state relative-caret-position="260">
+              <caret line="25" column="52" lean-forward="true" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -102,10 +100,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bestilling.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bestilling.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/bestilling.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
+            <state relative-caret-position="210">
               <caret line="50" column="39" lean-forward="false" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
               <folding />
             </state>
@@ -147,8 +145,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>x</find>
-      <find>hove</find>
       <find>hovere</find>
+      <find>hove</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -179,8 +177,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/meny.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/style.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/bestilling.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/livepanel.html" />
         <option value="$PROJECT_DIR$/src/main/java/minfil/Order.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/livepanel.html" />
       </list>
     </option>
   </component>
@@ -411,7 +409,7 @@
       <option name="presentableId" value="Default" />
       <updated>1505382505947</updated>
       <workItem from="1505382511313" duration="2962000" />
-      <workItem from="1505805027768" duration="82549000" />
+      <workItem from="1505805027768" duration="83405000" />
     </task>
     <task id="LOCAL-00001" summary="Nesten ferdig">
       <created>1506500291642</created>
@@ -420,11 +418,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506500291642</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Nesten ferdig2">
+      <created>1506501992171</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1506501992171</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85511000" />
+    <option name="totallyTimeSpent" value="86367000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -468,7 +473,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Nesten ferdig" />
-    <option name="LAST_COMMIT_MESSAGE" value="Nesten ferdig" />
+    <MESSAGE value="Nesten ferdig2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Nesten ferdig2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -640,14 +646,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/livepanel.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="26" column="137" lean-forward="false" selection-start-line="26" selection-start-column="133" selection-end-line="26" selection-end-column="137" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/minfil/Order.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -716,8 +714,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/bestilling.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
+        <state relative-caret-position="210">
           <caret line="50" column="39" lean-forward="false" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/livepanel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="25" column="52" lean-forward="true" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
           <folding />
         </state>
       </provider>

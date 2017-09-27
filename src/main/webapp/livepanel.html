@@ -24,7 +24,7 @@
                         var html = "";
                         for(i=0; i<data.length; i++) {
                             html += "<li>" + "Antall personer: " + data[i].antPers + "\n" + "Tidspunkt for reservering: " +
-                                data[i].tid +"\n" + "Antall middager: " + data[i].antMiddager + "\nForrett: " + data[i].forrett + "\nHovedrett: " +
+                                new Date(data[i].tid).toDateString() +"\n" + "Antall middager: " + data[i].antMiddager + "\nForrett: " + data[i].forrett + "\nHovedrett: " +
                                 data[i].hovedrett + "\nDessert: " + data[i].dessert +"</li>";
                         }
                         $("#ordre").html(html);
