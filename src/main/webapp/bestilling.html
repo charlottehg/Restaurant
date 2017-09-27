@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+    <title>Restauranter</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        $(document).ready(function() {
+
+            function getOrder() {
+                console.log($("#tid").val());
+                var data = JSON.stringify({
+                    antPers: $("#antPers").val(),
+                    tid: new Date($("#tid").val())  ,
+                    antMiddager: $("#antMiddager").val(),
+                });
+                console.log(data);
+                return data;
+            }
+
+            // Lag ny rest-ressursen under '/restauranter/'
+            $("#bestille").click(function () {
+                $.ajax({
+                    url: 'rest/restauranter',
+                    type: 'POST',
+                    data: getOrder(),
+                    contentType: 'application/json; charset=utf-8',
+                    dataType: 'json',
+                    complete: function(result) {
+                        alert("Takk for din bestilling!");
+                        alert("Din reservasjonsid: " + result.responseText);
+                        //$('#myTable').DataTable().ajax.reload();
+                    }
+                });
+                if(!$("input[name='forrett']").is(':checked')){
+                    alert('Ingen forrett bestilt');
+                    return false
+                }else{
+                    alert('Du har bestilt forrett');
+                }
+                if(!$("input[name='hovedrett']").is(':checked')){
+                    alert('Ingen hovedrett bestilt');
+                    return false
+                }else{
+                    alert('Du har bestilt hovedrett');
+                }
+                if(!$("input[name='dessert']").is(':checked')){
+                    alert('Ingen dessert bestilt');
+                    return false
+                }else{
+                    alert('Du har bestilt dessert');
+                }
+            });
+        });
+        function choice1(select){
+            alert(select.options[select.selectedIndex].text);
+        }
+    </script>
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"></a>
+        </div>
+        <div id = "mySidenav" class="sidenav">
+
+            <ul class="nav navbar-nav">
+                <li><a href="index.html"><span class="glyphicon glyphicon-home"></span></a></li>
+                <li><a href="meny.html">Meny</a></li>
+                <li><a href="bestilling.html">Bestilling</a></li>
+                <li><a href="omoss.html">Om oss</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div id="halvesiden">
+    <h1>Velkommen til online bestilling! </h1>
+    <div id="bildediv">
+        <img class="bilder" src=https://www.scandichotels.no/imagevault/publishedmedia/uva6c6adv54o2ps2jgr7/Scandic-Ornen-restaurant-roast-4.jpg>
+        <img class="bilder" src=https://media-cdn.tripadvisor.com/media/photo-s/0b/50/62/2c/the-restaurant-at-the.jpg>
+    </div>
+    <h3>Her kan du reservere bord og bestille mat</h3>
+    <div id="settestørrelse">
+        <input id="antPers" type="number"placeholder="Antall personer" aria-valuemin="0">
+        <input id="tid" type="datetime-local" placeholder="Tid">
+        <input id="antMiddager" type="number" placeholder="Antall middager">
+        <p>Oppgi kortinfo</p>
+        <input id="kortnr" type="number" placeholder="Skriv inn kortnr">
+        <input id="sifre" type="number"  placeholder="Skriv inn kontrollsifre">
+        <input id="utlopsdato" type="date" placeholder="Utløpsdato">
+    </div>
+
+    <p id="luft">NB! Menyen finner du ved å trykke på "Meny" øverst<br>Velg under nummeret på retten etter å ha lest den</p>
+    <p>Vil du bestille forrett, krysser du av her: </p>
+   <div id = "forrettRb">
+    <form action="">
+        <input type="radio" name="forrett" value="forrett1"> Forrett 1 <br>
+        <input type="radio" name="forrett" value="forrett3"> Forrett 2 <br>
+    </form>
+   </div>
+    <p><br>Vil du bestille hovedrett krysser du av her: </p>
+    <div id = "hovedrettRb">
+        <form action="">
+            <input type="radio" name="hovedrett" value="hovedrett1"> Hovedrett 1 <br>
+            <input type="radio" name="hovedrett" value="hovedrett2"> Hovedrett 2 <br>
+        </form>
+    </div>
+    <p><br>Vil du bestille dessert krysser du av her: </p>
+    <div id = "dessertRb">
+        <form action="">
+            <input type="radio" name="dessert" value="dessert1"> Dessert 1 <br>
+            <input type="radio" name="dessert" value="dessert2"> Dessert 2 <br>
+        </form>
+    </div>
+    <p><br><span class="glyphicon glyphicon-glass"></span>Her velger du drikke:
+    <br>(drikken serveres kun i glassflasker)</p>
+    <div id="combobox">
+    <select id="test-dropdown" onchange = "choice1(this)">
+        <option value="cola">Cola</option>
+        <option value="colaz">Cola Zero</option>
+        <option value="fanta">Fanta</option>
+        <option value="7Up">7Up</option>
+    </select>
+    <button id="bestille">Reserver bord</button><br>
+    </div>
+</div>
+</body>
+</html>

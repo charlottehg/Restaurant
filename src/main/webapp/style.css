@@ -1,0 +1,81 @@
+body {
+    background-color: lavender;
+}
+#siffer {
+    background-color: aliceblue;
+}
+#antMiddager{
+    background-color: aliceblue;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+#middagsValg{
+    background-color: aliceblue;
+}
+#tid {
+    background-color: aliceblue;
+    margin-top:10px;
+}
+#antPers {
+    background-color: aliceblue;
+}
+#bestille{
+    width: 150px;
+    margin-top: 10px;
+}
+#halvesiden{
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom:100px;
+}
+#menyside{
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+#settestørrelse{
+    width: 100px;
+    margin-top: 10px;
+    margin-bottom:10px;
+}
+#sifre{
+    margin-top: 10px;
+    margin-bottom:10px;
+    background-color: aliceblue;
+}
+#kortnr{
+    background-color: aliceblue;
+}
+#utlopsdato{
+    background-color: aliceblue;
+    margin-bottom:10px;
+}
+.btn {
+    background-color: black;
+}
+.bilder{
+    height: 200px;
+    width:300px;
+    margin: 20px;
+}
+.bildediv {
+    display: block;
+    text-align: center;
+}
+.bildene{
+    height: 250px;
+    width:320px;
+    margin: 20px;
+    text-align: center;
+}
+.bildedivlivepanel{
+    display: block;
+    text-align: center;
+}
+.combobox{
+    display: flex;
+    flex-direction: column;
+}

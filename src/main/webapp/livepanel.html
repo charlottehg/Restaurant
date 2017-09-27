@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <title>Live panel</title>
+    <script>
+        $(document).ready(function() {
+            // Lag ny rest-ressursen under '/restauranter/'
+            setTimeout(function () {
+                $.ajax({
+                    url: 'rest/restauranter',
+                    type: 'GET',
+                    contentType: 'application/json; charset=utf-8',
+                    dataType: 'json',
+                    complete: function(result) {
+                        (result.responseJSON);
+                        data = result.responseJSON;
+                        var html = "";
+                        for(i=0; i<data.length; i++) {
+                            html += "<li>" + "Antall personer: " + data[i].antPers + "\n" + "Tidspunkt for reservering: " +
+                                data[i].tid +"\n" + "Antall middager: " + data[i].antMiddager + "\n Denne reservasjonen har bestilt " +
+                                "middag nr</li>";
+                        }
+                        $("#ordre").html(html);
+                    }
+                }, 60000);
+            });
+        });
+
+        $(document).ready(function() {
+            getOrders();
+            setInterval(reloadOrders, 10000);
+            function getOrders() {
+                $("#ordre").html(html)({
+                    ajax: {
+                        url: 'rest/restauranter',
+                        dataSrc: ''
+                    },
+                    columns: [
+                        {data: 'forrett1'},
+                        {data: 'forrett2'},
+                        {data: 'hovedrett1'},
+                    ]
+                })
+            }
+        });
+
+    </script>
+
+</head>
+<body>
+<div id="bildedivlivepanel">
+    <img class="bildene"src="http://bocusedornorge.no/wp-content/uploads/2014/10/kokkene.jpg">
+    <img class="bildene"src="http://ndla.no/sites/default/files/images/szf27c17.jpg">
+    <img class="bildene"src="https://media-cdn.tripadvisor.com/media/photo-s/03/d5/14/f6/egon-frogner.jpg">
+</div>
+
+<h1>Livepanel for kokker og servitører</h1>
+<p>Middager som må klargjøres innen tidspunkt: </p>
+<ul id="ordre">
+</ul>
+</body>
+</html>
