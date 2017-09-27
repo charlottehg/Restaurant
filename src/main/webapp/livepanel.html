@@ -24,33 +24,14 @@
                         var html = "";
                         for(i=0; i<data.length; i++) {
                             html += "<li>" + "Antall personer: " + data[i].antPers + "\n" + "Tidspunkt for reservering: " +
-                                data[i].tid +"\n" + "Antall middager: " + data[i].antMiddager + "\n Denne reservasjonen har bestilt " +
-                                "middag nr</li>";
+                                data[i].tid +"\n" + "Antall middager: " + data[i].antMiddager + "\nForrett: " + data[i].forrett + "\nHovedrett: " +
+                                data[i].hovedrett + "\nDessert: " + data[i].dessert +"</li>";
                         }
                         $("#ordre").html(html);
                     }
                 }, 60000);
             });
         });
-
-        $(document).ready(function() {
-            getOrders();
-            setInterval(reloadOrders, 10000);
-            function getOrders() {
-                $("#ordre").html(html)({
-                    ajax: {
-                        url: 'rest/restauranter',
-                        dataSrc: ''
-                    },
-                    columns: [
-                        {data: 'forrett1'},
-                        {data: 'forrett2'},
-                        {data: 'hovedrett1'},
-                    ]
-                })
-            }
-        });
-
     </script>
 
 </head>

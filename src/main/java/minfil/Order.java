@@ -8,11 +8,39 @@ public class Order {
     private Date tid;
     private int antMiddager;
     private String id;
+    private String forrett;
+    private String hovedrett;
+    private String dessert;
 
     public Order() {
         this.antPers = antPers;
         this.tid = tid;
     }
+
+    public String getForrett() {
+        return forrett;
+    }
+
+    public void setForrett(String forrett) {
+        this.forrett = forrett;
+    }
+
+    public String getHovedrett() {
+        return hovedrett;
+    }
+
+    public void setHovedrett(String hovedrett) {
+        this.hovedrett = hovedrett;
+    }
+
+    public String getDessert() {
+        return dessert;
+    }
+
+    public void setDessert(String dessert) {
+        this.dessert = dessert;
+    }
+
     public int getAntPers() {
         return antPers;
     }

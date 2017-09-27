@@ -20,6 +20,9 @@
                     antPers: $("#antPers").val(),
                     tid: new Date($("#tid").val())  ,
                     antMiddager: $("#antMiddager").val(),
+                    forrett: $("input[name=forrett]:checked").val(),
+                    hovedrett: $("input[name=hovedrett]:checked").val(),
+                    dessert: $("input[name=dessert]:checked").val()
                 });
                 console.log(data);
                 return data;
@@ -104,7 +107,7 @@
    <div id = "forrettRb">
     <form action="">
         <input type="radio" name="forrett" value="forrett1"> Forrett 1 <br>
-        <input type="radio" name="forrett" value="forrett3"> Forrett 2 <br>
+        <input type="radio" name="forrett" value="forrett2"> Forrett 2 <br>
     </form>
    </div>
     <p><br>Vil du bestille hovedrett krysser du av her: </p>
